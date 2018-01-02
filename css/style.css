@@ -1,0 +1,63 @@
+#welcome {
+    color: orchid;
+    text-align: center;
+}
+
+#display {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#clear, #balance, #deposit, #withdraw {
+    position: fixed;
+    left: 700px;
+    width: 9em;
+    font-size: 12px;
+}
+#add, #subtract, #multiply, #divide, #equal {
+    position: fixed;
+    left: 650px;
+    width: 3em;
+    font-size: 12px;
+}
+
+#nine, #six, #three, #period {
+    position: fixed;
+    left: 600px;
+    width: 3em;
+    font-size: 12px;
+}
+
+#eight, #five, #two, #doubleZ {
+    position: fixed;
+    left: 550px;
+    width: 3em;
+    font-size: 12px;
+}
+#seven, #four, #one, #zero {
+    position: fixed;
+    left: 500px;
+    width: 3em;
+    font-size: 12px;
+}
+
+#add, #clear, #nine, #eight, #seven {
+    top: 150px; 
+}
+
+#subtract, #balance, #six, #five, #four {
+    top: 170px; 
+}
+
+#multiply, #deposit, #three, #two, #one {
+    top: 190px; 
+}
+
+#divide, #withdraw, #period, #doubleZ, #zero {
+    top: 210px;
+}
+
+#equal {
+    top: 230px;
+}
