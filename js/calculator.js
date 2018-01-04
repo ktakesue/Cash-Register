@@ -18,7 +18,8 @@ function calculatorModule(){
         multiply : multiply,
         divide : divide,
         recallMemory : recallMemory,
-        saveMemory : saveMemory,
+        depositMemory : depositMemory,
+        withdrawMemory : withdrawMemory,
         clearMemory : clearMemory,
     };
 
@@ -87,12 +88,18 @@ function calculatorModule(){
   }
 
   /**
-   * Stores the value of `total` to `memory`
+   * [deposit cash]` will add the amount currently in the `( display )` to the cash register, then clears the display
    */
-  function saveMemory(){
-    _memory = _total;
+  function depositMemory(){
+    _memory += _total;
   }
 
+  /** 
+  * [withdraw cash]` will remove the amount currently in the `( display )` to the cash register, then clears the display
+  */
+  function withdrawMemory(){
+    _memory -= _total;
+  }
 
   /**
    * Clear the value stored at `memory`
