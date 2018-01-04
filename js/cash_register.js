@@ -2,7 +2,7 @@ console.log("do i fucking work?");
 
 const Calc = calculatorModule();
 
-// document.getElementById("display").innerHTML += "$0.00";
+// document.getElementById("display").innerHTML = "$";
 
 // console.log(Calc.add(45));
 // console.log(Calc.subtract(9));
@@ -87,66 +87,77 @@ var equalElem = makeElem("button", "equal", "=");
 document.getElementById("nine").addEventListener("click", displayNine);
     function displayNine(){
         document.getElementById("display").innerHTML += "9";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("eight").addEventListener("click", displayEight);
     function displayEight(){
         document.getElementById("display").innerHTML += "8";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("seven").addEventListener("click", displaySeven);
     function displaySeven(){
         document.getElementById("display").innerHTML += "7";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("six").addEventListener("click", displaySix);
     function displaySix(){
         document.getElementById("display").innerHTML += "6";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("five").addEventListener("click", displayFive);
     function displayFive(){
         document.getElementById("display").innerHTML += "5";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("four").addEventListener("click", displayFour);
     function displayFour(){
         document.getElementById("display").innerHTML += "4";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("three").addEventListener("click", displayThree);
     function displayThree(){
         document.getElementById("display").innerHTML += "3";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("two").addEventListener("click", displayTwo);
     function displayTwo(){
         document.getElementById("display").innerHTML += "2";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("one").addEventListener("click", displayOne);
     function displayOne(){
         document.getElementById("display").innerHTML += "1";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("zero").addEventListener("click", displayZero);
     function displayZero(){
         document.getElementById("display").innerHTML += "0";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
 document.getElementById("doubleZ").addEventListener("click", displayDoubleZ);
     function displayDoubleZ(){
         document.getElementById("display").innerHTML += "00";
+            console.log(Number(display.innerHTML));
     // Calc.load(Number(display.innerHTML));
     }
 
@@ -158,6 +169,7 @@ document.getElementById("period").addEventListener("click", displayPeriod);
 document.getElementById("clear").addEventListener("click", displayClear);
     function displayClear(){
         Calc.clearMemory();
+            console.log(0);
         document.getElementById("display").innerHTML = "";
         // unary plus (+) does the same thing as Number (); //
     }
@@ -170,26 +182,30 @@ document.getElementById("equal").addEventListener("click", displayEqual);
     function displayEqual(){
        if (id === "add"){
             Calc.add(Number(display.innerHTML));
-                console.log(Number(display.innerHTML));
+                // console.log(display.innerHTML);
             document.getElementById("display").innerHTML = Calc.getTotal();
+                console.log(Calc.getTotal());
             Calc.load(Calc.getTotal());
             
     } else if (id === "subtract"){
             Calc.subtract(Number(display.innerHTML));
-                console.log(Number(display.innerHTML));
+                // console.log(display.innerHTML);
             document.getElementById("display").innerHTML = Calc.getTotal();
+                console.log(Calc.getTotal());
             Calc.load(Calc.getTotal());
            
     } else if (id === "multiply"){
             Calc.multiply(Number(display.innerHTML));
-                console.log(Number(display.innerHTML));
+                // console.log(display.innerHTML);
             document.getElementById("display").innerHTML = Calc.getTotal();
+                console.log(Calc.getTotal());
             Calc.load(Calc.getTotal());
            
     } else if (id === "divide"){
             Calc.divide(Number(display.innerHTML));
-                console.log(Number(display.innerHTML));
+                // console.log(display.innerHTML);
             document.getElementById("display").innerHTML = Calc.getTotal();
+                console.log(Calc.getTotal());
             Calc.load(Calc.getTotal());
             
     } 
@@ -200,7 +216,7 @@ document.getElementById("add").addEventListener("click", displayAdd);
         id = "add";
         var addResult = Number(display.innerHTML);
         Calc.load(addResult);
-            console.log(addResult);
+            // console.log(addResult);
         document.getElementById("display").innerHTML = "";
 }
 
@@ -209,7 +225,7 @@ document.getElementById("subtract").addEventListener("click", displaySubtract);
         id = "subtract";
         var subtractResult = Number(display.innerHTML);
         Calc.load(subtractResult);
-            console.log(subtractResult);
+            // console.log(subtractResult);
         document.getElementById("display").innerHTML = "";
 }
 
@@ -218,7 +234,7 @@ document.getElementById("multiply").addEventListener("click", displayMultiply);
         id = "multiply";
         var multiplyResult = Number(display.innerHTML);
         Calc.load(multiplyResult);
-            console.log(multiplyResult);
+            // console.log(multiplyResult);
         document.getElementById("display").innerHTML = "";
 }
 
@@ -227,7 +243,7 @@ document.getElementById("divide").addEventListener("click", displayDivide);
         id = "divide";
         var divideResult = Number(display.innerHTML);
         Calc.load(divideResult);
-            console.log(divideResult);
+            // console.log(divideResult);
         document.getElementById("display").innerHTML = "";
 }
 
@@ -236,20 +252,20 @@ document.getElementById("divide").addEventListener("click", displayDivide);
 document.getElementById("balance").addEventListener("click", displayBalance);
     function displayBalance(){
         Calc.recallMemory();
-            console.log(Number(display.innerHTML));
+            console.log("$" + Calc.recallMemory() + " " + "balance total");
         document.getElementById("display").innerHTML = Calc.recallMemory();
     }
 
 document.getElementById("deposit").addEventListener("click", displayDeposit);
     function displayDeposit(){
         Calc.depositMemory(Number(display.innerHTML));
-            console.log(Number(display.innerHTML));
+            console.log("$" + Calc.getTotal() + " " + "deposit amount");
         document.getElementById("display").innerHTML = "";
     }
 
 document.getElementById("withdraw").addEventListener("click", displayWithdraw);
     function displayWithdraw(){
         Calc.withdrawMemory(Number(display.innerHTML));
-            console.log(Number(display.innerHTML));
+            console.log("$" + Calc.getTotal() + " " + "withdraw amount");
         document.getElementById("display").innerHTML = "";
     }

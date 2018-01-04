@@ -31,7 +31,7 @@ function calculatorModule(){
   function load(num){
       Validation(num);
      _total = num;
-     console.log(_total);
+    //  console.log(_total);
      return _total;
   }
 
@@ -111,8 +111,8 @@ function calculatorModule(){
   /**
    * Validation
    */
-  function Validation(x){
-    if (typeof x !== 'number'){
+  function Validation(num){
+    if (typeof num !== 'number'){
          throw alert("not a number, you fool");
     }
   }
